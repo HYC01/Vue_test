@@ -1,0 +1,42 @@
+<template>
+    <div class="container">
+        <Category title="美食" :listData="foods">
+            <img src="./new_goods_3.jpg" alt="">
+        </Category>
+        <Category title="游戏" :listData="games">
+            <ul>
+                <li v-for="g,index in games" :key="index">{{g}}</li>
+            </ul>
+        </Category>
+        <Category title="电影" :listData="films">
+            <img src="./new_goods_3.jpg" alt="">
+        </Category>
+    </div>
+</template>
+
+<script>
+    import Category from './components/Category'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    export default {
+        components: { Category },
+        name:'App',
+        data(){
+            return {
+                foods:['火锅','烧烤','小龙虾','牛排'],
+                games:['红色警告','超级玛丽','劲舞团','出啊月火'],
+                films:['交付','拆弹专家','你好里欢迎','尚硅谷']
+            }
+        },
+
+    }
+</script>
+
+<style lang='css'>
+    .container{
+        display: flex;
+        justify-content: space-around;
+    }
+    img{
+        width:100%
+    }
+</style>
